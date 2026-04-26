@@ -1,0 +1,54 @@
+# 🚀 SQL Learning Journey — Day 1
+
+Hi, I'm Devansh 👋  
+Starting my 30-day journey to master SQL from basics to advanced.
+
+---
+
+## 🎯 Day 1 Goal
+Understand what SQL is and how databases work.
+
+---
+
+## 🧠 What is SQL?
+
+SQL (Structured Query Language) is used to:
+- Store data
+- Retrieve data
+- Update data
+- Delete data
+
+👉 In simple words:
+SQL = Language to talk to databases
+
+---
+
+## 🗄️ What is a Database?
+
+A database is a collection of data organized in tables.
+
+### Example:
+A student table:
+
+| ID | Name   | Marks |
+|----|--------|-------|
+| 1  | Devansh| 90    |
+| 2  | Rahul  | 85    |
+
+---
+
+## 📊 What is a Table?
+
+- Rows → Records
+- Columns → Fields
+
+👉 Think:
+Table = Excel Sheet
+
+---
+
+## 🔤 Basic SQL Query Structure
+
+```sql
+SELECT column_name
+FROM table_name;
