@@ -1,0 +1,51 @@
+-- 🚀 SQL Learning Journey — Day 2
+-- Topic: WHERE Clause (Filtering Data)
+
+-- 🎯 Goal:
+-- Learn how to filter specific records from a table
+
+-- 📊 Sample Table: students
+-- Columns: id, name, marks
+
+-- 🔹 1. Select all students with marks greater than 80
+SELECT * 
+FROM students
+WHERE marks > 80;
+
+-- 🔹 2. Select student with id = 1
+SELECT name 
+FROM students
+WHERE id = 1;
+
+-- 🔹 3. Select students with marks between 80 and 90
+SELECT * 
+FROM students
+WHERE marks >= 80 AND marks <= 90;
+
+-- 🔹 4. Select students with marks less than or equal to 50
+SELECT * 
+FROM students
+WHERE marks <= 50;
+
+-- 🔹 5. Select student with specific name
+SELECT * 
+FROM students
+WHERE name = 'Devansh';
+
+-- 🔹 6. Select students where marks are not equal to 60
+SELECT * 
+FROM students
+WHERE marks != 60;
+
+-- 🧠 Key Concepts:
+-- WHERE filters data
+-- Use operators: =, >, <, >=, <=, !=
+-- Text values must be in quotes
+
+-- 📝 Practice:
+-- Try writing queries for:
+-- 1. marks < 70
+-- 2. id != 3
+-- 3. name = 'Rahul'
+
+-- 🔜 Next: AND, OR, NOT (Day 3)
