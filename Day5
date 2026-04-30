@@ -1,0 +1,101 @@
+-- 🚀 SQL Learning Journey — Day 5
+-- Topic: ORDER BY & LIMIT (Sorting + Top Results)
+
+-- 🎯 Goal:
+-- Learn how to sort data and fetch top records
+
+-- 📊 Sample Table: students
+-- Columns: id, name, marks, city
+
+--------------------------------------------------
+-- 🔹 1. ORDER BY (Sorting Data)
+--------------------------------------------------
+
+-- Sort students by marks (ascending - default)
+SELECT *
+FROM students
+ORDER BY marks;
+
+-- Sort students by marks (descending)
+SELECT *
+FROM students
+ORDER BY marks DESC;
+
+-- Sort by name (alphabetical)
+SELECT *
+FROM students
+ORDER BY name;
+
+--------------------------------------------------
+-- 🔹 2. Sorting by Multiple Columns
+--------------------------------------------------
+
+-- First sort by city, then by marks
+SELECT *
+FROM students
+ORDER BY city, marks DESC;
+
+--------------------------------------------------
+-- 🔹 3. LIMIT (Top Records)
+--------------------------------------------------
+
+-- Get top 3 students
+SELECT *
+FROM students
+ORDER BY marks DESC
+LIMIT 3;
+
+--------------------------------------------------
+-- 🔹 4. OFFSET (Skip Records)
+--------------------------------------------------
+
+-- Skip first 2 students, then show next 3
+SELECT *
+FROM students
+ORDER BY marks DESC
+LIMIT 3 OFFSET 2;
+
+--------------------------------------------------
+-- 🔹 5. Real-World Queries 🔥
+--------------------------------------------------
+
+-- Highest marks
+SELECT *
+FROM students
+ORDER BY marks DESC
+LIMIT 1;
+
+-- Lowest marks
+SELECT *
+FROM students
+ORDER BY marks ASC
+LIMIT 1;
+
+-- Top 5 students from Delhi
+SELECT *
+FROM students
+WHERE city = 'Delhi'
+ORDER BY marks DESC
+LIMIT 5;
+
+--------------------------------------------------
+-- 🧠 Key Concepts:
+--------------------------------------------------
+-- ORDER BY → sorting
+-- ASC → ascending (default)
+-- DESC → descending
+-- LIMIT → restrict number of rows
+-- OFFSET → skip rows
+
+--------------------------------------------------
+-- 📝 Practice Questions:
+--------------------------------------------------
+
+-- 1. Get top 2 students with lowest marks
+-- 2. Sort students by name descending
+-- 3. Get 3 students after skipping first 1
+-- 4. Get highest marks student from Mumbai
+
+--------------------------------------------------
+-- 🔜 Next: GROUP BY + Aggregation (Day 6)
+--------------------------------------------------
