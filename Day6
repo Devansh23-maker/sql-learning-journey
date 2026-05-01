@@ -1,0 +1,103 @@
+-- 🚀 SQL Learning Journey — Day 6
+-- Topic: GROUP BY & Aggregate Functions
+
+-- 🎯 Goal:
+-- Learn how to summarize and analyze data
+
+-- 📊 Sample Table: students
+-- Columns: id, name, marks, city
+
+--------------------------------------------------
+-- 🔹 1. Aggregate Functions
+--------------------------------------------------
+
+-- Count total students
+SELECT COUNT(*) AS total_students
+FROM students;
+
+-- Average marks
+SELECT AVG(marks) AS avg_marks
+FROM students;
+
+-- Maximum marks
+SELECT MAX(marks) AS highest_marks
+FROM students;
+
+-- Minimum marks
+SELECT MIN(marks) AS lowest_marks
+FROM students;
+
+-- Total marks
+SELECT SUM(marks) AS total_marks
+FROM students;
+
+--------------------------------------------------
+-- 🔹 2. GROUP BY (Grouping Data)
+--------------------------------------------------
+
+-- Count students in each city
+SELECT city, COUNT(*) AS total_students
+FROM students
+GROUP BY city;
+
+-- Average marks per city
+SELECT city, AVG(marks) AS avg_marks
+FROM students
+GROUP BY city;
+
+--------------------------------------------------
+-- 🔹 3. GROUP BY + ORDER BY
+--------------------------------------------------
+
+-- Cities with highest average marks first
+SELECT city, AVG(marks) AS avg_marks
+FROM students
+GROUP BY city
+ORDER BY avg_marks DESC;
+
+--------------------------------------------------
+-- 🔹 4. GROUP BY + WHERE
+--------------------------------------------------
+
+-- Average marks for students with marks > 50
+SELECT city, AVG(marks) AS avg_marks
+FROM students
+WHERE marks > 50
+GROUP BY city;
+
+--------------------------------------------------
+-- 🔹 5. HAVING (VERY IMPORTANT 🔥)
+--------------------------------------------------
+
+-- Cities having average marks > 70
+SELECT city, AVG(marks) AS avg_marks
+FROM students
+GROUP BY city
+HAVING AVG(marks) > 70;
+
+--------------------------------------------------
+-- ⚠️ IMPORTANT DIFFERENCE
+--------------------------------------------------
+
+-- WHERE → filters rows BEFORE grouping
+-- HAVING → filters groups AFTER grouping
+
+--------------------------------------------------
+-- 🧠 Key Concepts:
+--------------------------------------------------
+-- COUNT(), SUM(), AVG(), MAX(), MIN()
+-- GROUP BY → grouping data
+-- HAVING → filter grouped data
+
+--------------------------------------------------
+-- 📝 Practice Questions:
+--------------------------------------------------
+
+-- 1. Count students in each city
+-- 2. Find max marks per city
+-- 3. Find cities with more than 2 students
+-- 4. Find cities where avg marks > 60
+
+--------------------------------------------------
+-- 🔜 Next: JOINS (Day 7 - VERY IMPORTANT 🔥🔥)
+--------------------------------------------------
