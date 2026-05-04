@@ -1,0 +1,88 @@
+-- 🚀 SQL Learning Journey — Day 9
+-- Topic: Views & Indexes
+
+-- 🎯 Goal:
+-- Learn how to simplify queries and improve performance
+
+-- 📊 Sample Table: students
+-- Columns: id, name, marks, city
+
+--------------------------------------------------
+-- 🔹 1. VIEW (Virtual Table)
+--------------------------------------------------
+
+-- Create a view for top students
+CREATE VIEW top_students AS
+SELECT name, marks
+FROM students
+WHERE marks > 80;
+
+-- Use the view
+SELECT * FROM top_students;
+
+-- 👉 View behaves like a table but stores no data
+
+--------------------------------------------------
+-- 🔹 2. Updating View
+--------------------------------------------------
+
+-- Replace existing view
+CREATE OR REPLACE VIEW top_students AS
+SELECT name, marks
+FROM students
+WHERE marks > 85;
+
+--------------------------------------------------
+-- 🔹 3. Drop View
+--------------------------------------------------
+
+DROP VIEW top_students;
+
+--------------------------------------------------
+-- 🔹 4. INDEX (Performance Boost 🚀)
+--------------------------------------------------
+
+-- Create index on marks column
+CREATE INDEX idx_marks
+ON students(marks);
+
+-- 👉 Speeds up searching and filtering
+
+--------------------------------------------------
+-- 🔹 5. Index on Multiple Columns
+--------------------------------------------------
+
+CREATE INDEX idx_city_marks
+ON students(city, marks);
+
+--------------------------------------------------
+-- 🔹 6. Drop Index
+--------------------------------------------------
+
+DROP INDEX idx_marks ON students;
+
+--------------------------------------------------
+-- 🧠 Key Concepts:
+--------------------------------------------------
+-- VIEW → virtual table (no storage)
+-- INDEX → speeds up queries
+-- Useful for large datasets
+
+--------------------------------------------------
+-- ⚠️ Important Notes:
+--------------------------------------------------
+-- Too many indexes = slower inserts/updates
+-- Use indexes only when needed
+
+--------------------------------------------------
+-- 📝 Practice Questions:
+--------------------------------------------------
+
+-- 1. Create view for students with marks > 70
+-- 2. Create index on name column
+-- 3. Drop a view
+-- 4. Create index on city
+
+--------------------------------------------------
+-- 🔜 Next: Constraints & Keys (Day 10)
+--------------------------------------------------
