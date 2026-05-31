@@ -1,4 +1,4 @@
--- 🚀 SQL Learning Journey — Day 30
+-- 🚀 SQL. Learning Journey — Day30
 -- Ultimate SQL Cheat Sheet
 
 -- 🎯 Goal:
